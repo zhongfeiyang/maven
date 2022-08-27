@@ -3,9 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.lifa</groupId>
-    <artifactId>java-basic-tools</artifactId>
-    <version>0.0.1</version>
-    <name>java-basic-tools</name>
+    <artifactId>java-basic-web</artifactId>
+    <version>0.0.2</version>
+    <name>java-basic-web</name>
+    <description>basic libs</description>
 
     <parent>
         <groupId>com.lifa</groupId>
@@ -14,12 +15,7 @@
     </parent>
 
     <dependencies>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
-            <scope>compile</scope>
-        </dependency>
+
     </dependencies>
 
 </project>
