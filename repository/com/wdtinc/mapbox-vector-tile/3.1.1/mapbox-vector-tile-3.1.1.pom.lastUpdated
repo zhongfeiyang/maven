@@ -1,0 +1,11 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Dec 02 10:13:45 CST 2022
+http\://192.168.48.182\:8081/\#browse/browse\:maven-releases/.lastUpdated=1661753612058
+http\://maven.aliyun.com/nexus/content/groups/public/.error=
+http\://192.168.48.182\:8081/repository/maven-releases/.error=
+https\://gitee.com/geomars/maven/repository/.lastUpdated=1669947196734
+https\://gitee.com/geomars/maven/tree/master/repository/.error=
+http\://maven.aliyun.com/nexus/content/groups/public/.lastUpdated=1669947196907
+http\://192.168.48.182\:8081/repository/maven-releases/.lastUpdated=1661164965416
+https\://gitee.com/geomars/maven/repository/.error=
+https\://gitee.com/geomars/maven/tree/master/repository/.lastUpdated=1669947225239
