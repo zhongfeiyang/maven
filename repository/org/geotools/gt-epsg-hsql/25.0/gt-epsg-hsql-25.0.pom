@@ -1,111 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- =======================================================================    
+        Maven Project Configuration File                                        
+                                                                                
+        The Geotools Project                                                    
+            http://www.geotools.org/                                            
+                                                                                
+        Version: $Id$              
+     ======================================================================= -->
+  <project xmlns="http://maven.apache.org/POM/4.0.0" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                               http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Nexus Repository Manager</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="description" content="Nexus Repository Manager"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <parent>
+    <groupId>org.geotools</groupId>
+    <artifactId>plugin</artifactId>
+    <version>25.0</version>
+  </parent>
 
 
-  <!--[if lt IE 9]>
-    <script>(new Image).src="./static/rapture/resources/favicon.ico?_v=3.39.0-01&_e=OSS"</script>
-  <![endif]-->
-  <link rel="icon" type="image/png" href="./static/rapture/resources/favicon-32x32.png?_v=3.39.0-01&_e=OSS" sizes="32x32">
-  <link rel="mask-icon" href="./static/rapture/resources/safari-pinned-tab.svg?_v=3.39.0-01&_e=OSS" color="#5bbad5">
-  <link rel="icon" type="image/png" href="./static/rapture/resources/favicon-16x16.png?_v=3.39.0-01&_e=OSS" sizes="16x16">
-  <link rel="shortcut icon" href="./static/rapture/resources/favicon.ico?_v=3.39.0-01&_e=OSS">
-  <meta name="msapplication-TileImage" content="./static/rapture/resources/mstile-144x144.png?_v=3.39.0-01&_e=OSS">
-  <meta name="msapplication-TileColor" content="#00a300">
-
+  <!-- =========================================================== -->
+  <!--     Module Description                                      -->
+  <!-- =========================================================== -->
+  <groupId>org.geotools</groupId>
+  <artifactId>gt-epsg-hsql</artifactId>
+  <packaging>jar</packaging>
+  <name>EPSG Authority Service using HSQL database</name>
   
 
-      <link rel="stylesheet" type="text/css" href="./static/rapture/resources/loading-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/baseapp-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/nexus-rapture-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/nexus-proximanova-plugin-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/nexus-coreui-plugin-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/nexus-proui-plugin-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/rapture/resources/nexus-onboarding-plugin-prod.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/nexus-rapture-bundle.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/nexus-coreui-bundle.css?_v=3.39.0-01&_e=OSS">
-    <link rel="stylesheet" type="text/css" href="./static/nexus-proui-bundle.css?_v=3.39.0-01&_e=OSS">
 
-    <script type="text/javascript">
-    function progressMessage(msg) {
-      if (console && console.log) {
-        console.log(msg);
-      }
-      document.getElementById('loading-msg').innerHTML=msg;
-    }
-  </script>
-</head>
-<body class="x-border-box">
+  <description>
+    Connection to an embedded EPSG database in HSQL format.
+    This database is built from the SQL scripts delivered by EPSG.
+  </description>
 
-<div id="loading-mask"></div>
-<div id="loading">
-  <div id="loading-background">
-    <img id="loading-logo" src="./static/rapture/resources/images/nxrm-logo-white.svg?_v=3.39.0-01&_e=OSS" alt="Product Logo" width='116' height='116' />
-    <img id="loading-product" src="./static/rapture/resources/images/loading-product.png?_v=3.39.0-01&_e=OSS" alt="Nexus Repository Manager"/>
-    <div class="loading-indicator">
-      <img id="loading-spinner" src="./static/rapture/resources/images/loading-spinner.gif?_v=3.39.0-01&_e=OSS" alt="Loading Spinner"/>
-      <span id="loading-msg">Loading ...</span>
-    </div>
-  </div>
+  <licenses>
+    <license>
+      <name>Lesser General Public License (LGPL)</name>
+      <!-- url>http://www.gnu.org/copyleft/lesser.txt</url -->
+      <url>https://github.com/geotools/geotools/blob/master/modules/plugin/epsg-hsql/LICENSE.txt</url>
+      <distribution>repo</distribution>
+    </license>
+    <license>
+      <name>EPSG database distribution license</name>
+      <url>https://github.com/geotools/geotools/blob/master/licenses/EPSG.md</url>
+      <distribution>repo</distribution>
+      <comments>
+        This Geotools module is bundled with a copy of the EPSG database. The
+        data may be copied and distributed subject to the EPSG conditions.
+      </comments>
+    </license>
+    <license>
+      <name>BSD License for HSQL</name>
+      <url>https://github.com/geotools/geotools/blob/master/licenses/HSQL.md</url>
+      <distribution>repo</distribution>
+      <comments>
+        This Geotools module requires the HSQL database engine, which is bundled
+        with the binary distribution only (there is no HSQL derived work in the
+        Java source code).
+      </comments>
+    </license>
+  </licenses>
 
-    <div id="code-load" class="x-hide-display">
 
-        <script type="text/javascript">progressMessage('Loading baseapp-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/baseapp-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading extdirect-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/extdirect-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading bootstrap.js');</script>
-      <script type="text/javascript" src="./static/rapture/bootstrap.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-rapture-bundle.js');</script>
-      <script type="text/javascript" src="./static/nexus-rapture-bundle.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-coreui-bundle.js');</script>
-      <script type="text/javascript" src="./static/nexus-coreui-bundle.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-proui-bundle.js');</script>
-      <script type="text/javascript" src="./static/nexus-proui-bundle.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-rapture-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-rapture-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-blobstore-s3-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-blobstore-s3-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-rutauth-plugin-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-rutauth-plugin-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-blobstore-azure-cloud-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-blobstore-azure-cloud-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-coreui-plugin-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-coreui-plugin-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-proui-plugin-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-proui-plugin-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-maven-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-maven-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-onboarding-plugin-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-onboarding-plugin-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-npm-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-npm-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-nuget-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-nuget-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-rubygems-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-rubygems-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-docker-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-docker-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-repository-pypi-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-repository-pypi-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading nexus-analytics-plugin-prod.js');</script>
-      <script type="text/javascript" src="./static/rapture/nexus-analytics-plugin-prod.js?_v=3.39.0-01&_e=OSS"></script>
-    <script type="text/javascript">progressMessage('Loading app.js');</script>
-      <script type="text/javascript" src="./static/rapture/app.js?_v=3.39.0-01&_e=OSS"></script>
+  <!-- =========================================================== -->
+  <!--     Developers and Contributors                             -->
+  <!-- =========================================================== -->
+  <developers>
+    <developer>
+      <name>Didier Richard</name>
+      <email>dgr@libertysurf.fr</email>
+      <organization>Institut Géographique National - France</organization>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Java Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Martin Desruisseaux</name>
+      <id>desruisseaux</id>
+      <email>desruisseaux@users.sourceforge.net</email>
+      <organization>Geomatys</organization>
+      <organizationUrl>http://www.geomatys.fr/</organizationUrl>
+      <timezone>+1</timezone>
+      <roles>
+        <role>Retired Module Maintainer</role>
+        <role>Retired Java Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Andrea Aime</name>
+      <id>aaime</id>
+      <email>aaime@users.sourceforge.net</email>
+      <roles>
+        <role>Java Developer</role>
+        <role>Module Maintainer</role>
+      </roles>
+    </developer>
+  </developers>
 
-        <script type="text/javascript">progressMessage('Initializing ...');</script>
-  </div>
-</div>
 
-<form id="history-form" class="x-hide-display" tabindex="-1">
-  <input type="hidden" id="x-history-field"/>
-  <iframe id="x-history-frame" title="Browse history form"></iframe>
-</form>
+  <!-- =========================================================== -->
+  <!--     Dependency Management                                   -->
+  <!-- =========================================================== -->
+  <dependencies>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-referencing</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-sample-data</artifactId>
+      <version>${project.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <!-- The version number is specified in the parent POM. -->
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.groboutils</groupId>
+      <artifactId>groboutils-core</artifactId>
+      <version>5</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <scope>test</scope>
+    </dependency>    
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-referencing</artifactId>
+      <version>${project.version}</version>
+      <classifier>tests</classifier>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <!-- disable the mediator tests, they are all broken by the EPSG database upgrade -->
+            <exclude>**/*Mediator*.java</exclude>
+            <exclude>**/HsqlDialectEpsgFactoryTest.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
 
-</body>
-</html>
+</project>

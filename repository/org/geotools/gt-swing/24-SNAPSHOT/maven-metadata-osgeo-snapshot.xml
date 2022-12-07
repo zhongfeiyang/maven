@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>org.geotools</groupId>
+  <artifactId>gt-swing</artifactId>
+  <version>24-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20210827.211012</timestamp>
+      <buildNumber>84</buildNumber>
+    </snapshot>
+    <lastUpdated>20210828081728</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>24-20210827.211012-84</value>
+        <updated>20210827211012</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>24-20210827.211012-84</value>
+        <updated>20210827211012</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>24-20210827.211012-84</value>
+        <updated>20210827211012</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
