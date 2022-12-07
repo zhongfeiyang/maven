@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Aug 29 14:13:31 CST 2022
+netcdfAll-5.5.2.jar>thp-nexus-aliyun=
+netcdfAll-5.5.2.pom>maven-releases=
+netcdfAll-5.5.2.jar>maven-releases=
+netcdfAll-5.5.2.pom>thp-nexus-aliyun=

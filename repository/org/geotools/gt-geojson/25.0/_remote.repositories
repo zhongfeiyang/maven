@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Aug 29 14:13:31 CST 2022
+gt-geojson-25.0.jar>maven-releases=
+gt-geojson-25.0.pom>maven-releases=
+gt-geojson-25.0.jar>thp-nexus-aliyun=
+gt-geojson-25.0.pom>thp-nexus-aliyun=
