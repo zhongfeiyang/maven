@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.geomars</groupId>
-  <artifactId>spring-core-web</artifactId>
+  <artifactId>spring-core-secure</artifactId>
   <versioning>
     <release>0.0.1</release>
     <versions>

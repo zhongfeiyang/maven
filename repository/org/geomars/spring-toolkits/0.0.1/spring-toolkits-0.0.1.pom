@@ -8,6 +8,7 @@
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <modules>
+    <module>spring-core-secure</module>
     <module>spring-core-tool</module>
     <module>spring-core-web</module>
     <module>spring-starter-jwt</module>
@@ -37,7 +38,7 @@
       <dependency>
         <groupId>org.geomars</groupId>
         <artifactId>spring-core-tool</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -54,6 +55,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <version>1.5.22</version>
     </dependency>
   </dependencies>
   <build>
