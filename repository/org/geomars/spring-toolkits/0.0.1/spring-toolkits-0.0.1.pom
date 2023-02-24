@@ -12,6 +12,8 @@
     <module>spring-core-tool</module>
     <module>spring-core-web</module>
     <module>spring-starter-jwt</module>
+    <module>spring-starter-swagger</module>
+    <module>spring-starter-redis</module>
   </modules>
   <distributionManagement>
     <repository>
@@ -20,11 +22,22 @@
     </repository>
   </distributionManagement>
   <properties>
-    <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <spring.starter.swagger.version>0.0.1</spring.starter.swagger.version>
+    <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
     <java.version>1.8</java.version>
-    <revision>0.0.1</revision>
+    <spring.core.tool.version>0.0.2</spring.core.tool.version>
+    <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+    <guava.version>30.0-jre</guava.version>
+    <spring.starter.jwt.version>0.0.1</spring.starter.jwt.version>
+    <spring.core.web.version>0.0.1</spring.core.web.version>
+    <spring.starter.excel.version>0.0.1</spring.starter.excel.version>
+    <knife4j.version>2.0.8</knife4j.version>
+    <spring.core.secure.version>0.0.1</spring.core.secure.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <revision>0.0.1</revision>
+    <spring.starter.redis.version>0.0.1</spring.starter.redis.version>
+    <swagger-models.version>1.5.21</swagger-models.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -40,12 +53,22 @@
         <artifactId>spring-core-tool</artifactId>
         <version>0.0.2</version>
       </dependency>
+      <dependency>
+        <groupId>org.geomars</groupId>
+        <artifactId>spring-core-secure</artifactId>
+        <version>0.0.1</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -60,6 +83,11 @@
       <groupId>io.swagger</groupId>
       <artifactId>swagger-annotations</artifactId>
       <version>1.5.22</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
     </dependency>
   </dependencies>
   <build>
@@ -91,6 +119,18 @@
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.1.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-configuration-processor</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
