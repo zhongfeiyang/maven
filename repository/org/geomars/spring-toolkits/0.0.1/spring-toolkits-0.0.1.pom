@@ -12,6 +12,7 @@
     <module>spring-core-tool</module>
     <module>spring-core-web</module>
     <module>spring-starter-jwt</module>
+    <module>spring-starter-mybatis</module>
     <module>spring-starter-swagger</module>
     <module>spring-starter-redis</module>
   </modules>
@@ -24,8 +25,9 @@
   <properties>
     <spring.starter.swagger.version>0.0.1</spring.starter.swagger.version>
     <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+    <spring.starter.mybatis.version>0.0.1</spring.starter.mybatis.version>
     <java.version>1.8</java.version>
-    <spring.core.tool.version>0.0.2</spring.core.tool.version>
+    <spring.core.tool.version>0.0.3</spring.core.tool.version>
     <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
     <guava.version>30.0-jre</guava.version>
     <spring.starter.jwt.version>0.0.1</spring.starter.jwt.version>
@@ -51,12 +53,27 @@
       <dependency>
         <groupId>org.geomars</groupId>
         <artifactId>spring-core-tool</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
       </dependency>
       <dependency>
         <groupId>org.geomars</groupId>
         <artifactId>spring-core-secure</artifactId>
         <version>0.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>3.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus</artifactId>
+        <version>3.5.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+        <version>3.5.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
