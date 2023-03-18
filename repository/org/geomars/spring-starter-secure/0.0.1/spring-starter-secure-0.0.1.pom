@@ -8,7 +8,7 @@
     <version>0.0.1</version>
   </parent>
   <groupId>org.geomars</groupId>
-  <artifactId>spring-core-secure</artifactId>
+  <artifactId>spring-starter-secure</artifactId>
   <version>0.0.1</version>
   <name>${project.artifactId}</name>
   <dependencies>
@@ -23,6 +23,11 @@
     <dependency>
       <groupId>org.geomars</groupId>
       <artifactId>spring-starter-jwt</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geomars</groupId>
+      <artifactId>spring-starter-auth</artifactId>
       <version>0.0.1</version>
     </dependency>
   </dependencies>
